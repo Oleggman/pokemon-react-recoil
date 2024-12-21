@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
-    background-color: #18181B;
+    background-color: rgb(0, 6, 31);
   }
 
   code {
