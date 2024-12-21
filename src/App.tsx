@@ -1,11 +1,11 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router';
 import { RecoilRoot } from 'recoil'
-import { SharedLayout } from './SharedLayout';
+import { SharedLayout } from './pages/SharedLayout';
 
-const Home = lazy(() => import('./Home'));
-const PokemonFinder = lazy(() => import('./PokemonFinder'));
-const PokemonInfo = lazy(() => import('./PokemonInfo'));
+const Home = lazy(() => import('./pages/Home'));
+const PokemonFinder = lazy(() => import('./pages/PokemonFinder'));
+const PokemonInfo = lazy(() => import('./pages/PokemonInfo'));
 
 function App() {
   return (
