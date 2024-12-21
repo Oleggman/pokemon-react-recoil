@@ -1,6 +1,7 @@
+import { NavLink } from "react-router";
 import styled from "styled-components";
 
-export const Card = styled.div`
+export const CardLink = styled(NavLink)`
   --blur: 16px;
   width: 280px;
   height: 260px;

@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil";
-import { pokemonsState } from "../../../recoil/atoms/pokemons";
+import { pokemonsState } from "../../../../recoil/atoms/pokemons";
 import { useEffect } from "react";
-import { getAllPokemons } from "../../../api/pokemonApi";
+import { getAllPokemons } from "../../../../api/pokemonApi";
 import { Ul } from "./PokemonList.styled";
 import { Pokemon, PokemonCard } from "../PokemonCard";
 
