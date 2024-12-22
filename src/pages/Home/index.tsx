@@ -39,7 +39,7 @@ const Home = () => {
     return (
         <>
             <PokemonList pokemons={pokemons} />
-            <LoadMoreButton onLoadMore={onLoadMore}/>
+            {pokemons?.length && <LoadMoreButton onLoadMore={onLoadMore}/>}
         </>
     );
 };
