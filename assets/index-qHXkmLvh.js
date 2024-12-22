@@ -1,4 +1,4 @@
-import{R as u,d as n,j as o,N as x,a as h,r as d}from"./index-Chxikn4t.js";import{g as m,a as f}from"./pokemonApi-BwR6fMZF.js";import{N as g}from"./notiflix-aio-3.2.7.min-DB3CDY3z.js";const b=u({key:"pokemonsState",default:[]}),k=n.button`
+import{R as p,d as a,j as o,N as x,a as d,r as m}from"./index-Ct1ClzgS.js";import{N as f}from"./notiflix-aio-3.2.7.min-DUxo8DLb.js";import{g as h,a as g}from"./pokemonApi-BwR6fMZF.js";const b=p({key:"pokemonsState",default:[]}),k=p({key:"nextPokemonsState",default:null}),y=a.button`
     appearance: none;
     background-color: #FFFFFF;
     border-radius: 40em;
@@ -28,13 +28,13 @@ import{R as u,d as n,j as o,N as x,a as h,r as d}from"./index-Chxikn4t.js";impor
         box-shadow: #FF6314 0 -6px 8px inset;
         transform: scale(1.125);
     }
-`,F=({onLoadMore:t})=>o.jsx(k,{onClick:t,children:"Load more"}),y=n.ul`
+`,F=({onLoadMore:t})=>o.jsx(y,{onClick:t,children:"Load more"}),j=a.ul`
     padding: 20px;
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
-`,j="/pokemon-react-recoil/assets/Poke_Ball-DLvYj19I.webp",w=n(x)`
+`,w="/pokemon-react-recoil/assets/Poke_Ball-DLvYj19I.webp",v=a(x)`
   --blur: 16px;
   width: 280px;
   height: 260px;
@@ -51,13 +51,13 @@ import{R as u,d as n,j as o,N as x,a as h,r as d}from"./index-Chxikn4t.js";impor
   &:hover {
     scale: 1.1;
   }
-`,v=n.img`
+`,C=a.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * -5deg));
   transition: transform 0.2s;
-`,C=n.p`
+`,L=a.p`
   padding: 0 1.5rem;
   position: absolute;
   bottom: 0;
@@ -72,4 +72,4 @@ import{R as u,d as n,j as o,N as x,a as h,r as d}from"./index-Chxikn4t.js";impor
   align-content: center;
   font-size: 20px;
   font-weight: 700;
-`,L=({pokemon:{name:t}})=>{const a=t.charAt(0).toUpperCase()+t.slice(1);return o.jsxs(w,{to:`/pokemons/${t}`,children:[o.jsx(v,{src:j,alt:"Pokemon photo"}),o.jsx(C,{children:a})]})},N=({pokemons:t})=>t?o.jsx(y,{children:t.map(a=>o.jsx(L,{pokemon:a},a.name))}):null,R=()=>{const[t,a]=h(b),[i,c]=d.useState(null);d.useEffect(()=>{if(t.length>0)return;(async()=>{var e,l;const r=await m();a((e=r==null?void 0:r.data)==null?void 0:e.results),c((l=r==null?void 0:r.data)==null?void 0:l.next)})()},[a]);const p=async()=>{var s,r;if(i)try{const e=await f(i);if(!((s=e==null?void 0:e.data)!=null&&s.results))throw new Error;a([...t,...e.data.results]),c((r=e==null?void 0:e.data)==null?void 0:r.next)}catch{g.Notify.failure("Failed to load")}};return o.jsxs(o.Fragment,{children:[o.jsx(N,{pokemons:t}),(t==null?void 0:t.length)&&o.jsx(F,{onLoadMore:p})]})};export{R as default};
+`,N=({pokemon:{name:t}})=>{const n=t.charAt(0).toUpperCase()+t.slice(1);return o.jsxs(v,{to:`/pokemons/${t}`,children:[o.jsx(C,{src:w,alt:"Pokemon photo"}),o.jsx(L,{children:n})]})},P=({pokemons:t})=>t?o.jsx(j,{children:t.map(n=>o.jsx(N,{pokemon:n},n.name))}):null,R=()=>{const[t,n]=d(b),[i,c]=d(k);m.useEffect(()=>{if(t.length>0)return;(async()=>{var e,l;const r=await h();n((e=r==null?void 0:r.data)==null?void 0:e.results),c((l=r==null?void 0:r.data)==null?void 0:l.next)})()},[n]);const u=async()=>{var s,r;if(i)try{const e=await g(i);if(!((s=e==null?void 0:e.data)!=null&&s.results))throw new Error;n([...t,...e.data.results]),c((r=e==null?void 0:e.data)==null?void 0:r.next)}catch{f.Notify.failure("Failed to load")}};return o.jsxs(o.Fragment,{children:[o.jsx(P,{pokemons:t}),(t==null?void 0:t.length)&&o.jsx(F,{onLoadMore:u})]})};export{R as default};
