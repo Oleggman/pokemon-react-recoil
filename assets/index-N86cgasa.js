@@ -1,4 +1,4 @@
-import{d as o,j as t,G as L,u as S,b as v,r as b,e as P,L as w}from"./index-D-7imxjZ.js";import{b as B}from"./pokemonApi-BwR6fMZF.js";const z=o.div`
+import{d as o,j as t,G as L,u as S,b as v,r as b,e as P,L as w}from"./index-Chxikn4t.js";import{b as B}from"./pokemonApi-BwR6fMZF.js";const z=o.div`
     display: flex;
     justify-content: space-around;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
