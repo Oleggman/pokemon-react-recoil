@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
-import { getAllPokemons, getPokemonByQuery } from "../../api/pokemonApi";
-import { pokemonsState } from "../../recoil/atoms/pokemons";
-import { LoadMoreButton } from "./components/LoadMoreButton";
-import { PokemonList } from "./components/PokemonList";
+import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import Notiflix from "notiflix";
+import { getAllPokemons, getPokemonByQuery } from "../../api/pokemonApi";
+import { pokemonsState } from "../../recoil/atoms/pokemons";
+import { nextPokemonsState } from "../../recoil/atoms/nextPokemons";
+import { LoadMoreButton } from "./components/LoadMoreButton";
+import { PokemonList } from "./components/PokemonList";
 
 const Home = () => {
     const [pokemons, setPokemons] = useRecoilState(pokemonsState);
-    const [nextPokemons, setNextPokemons] = useState(null);
+    const [nextPokemons, setNextPokemons] = useRecoilState(nextPokemonsState);
 
     useEffect(() => {
         if (pokemons.length > 0) return;
