@@ -1,4 +1,4 @@
-import{R as c,d as r,N as i,j as o,a as l,r as p}from"./index-Dx12sLBT.js";import{g as d}from"./pokemonApi-CDAoPUDP.js";const m=c({key:"pokemonsState",default:[]}),h=r.ul`
+import{R as c,d as r,N as i,j as o,a as l,r as p}from"./index-DtUoOK0C.js";import{g as d}from"./pokemonApi-CDAoPUDP.js";const m=c({key:"pokemonsState",default:[]}),h=r.ul`
     padding: 20px;
     display: flex;
     gap: 40px;
