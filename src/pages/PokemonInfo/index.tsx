@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router";
 import { getPokemonById } from "../../api/pokemonApi";
 import { PokemonDetails } from "./PokemonDetails";
+import { Loader } from "../common/components/Loader";
 
 const PokemonInfo = () => {
     const location = useLocation();
@@ -19,7 +20,7 @@ const PokemonInfo = () => {
         }
     }, [location.state?.pokemon, pokemonId]);
 
-    if (!pokemon) return null;
+    if (!pokemon) return <Loader />;
 
     const { name, sprites, types, abilities, stats, weight, height } = pokemon;
 

@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
     background-color: rgb(0, 6, 31);
+    padding-bottom: 40px;
   }
 
   code {
