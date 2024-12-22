@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import { Header, Nav, StyledNavLink } from "./SharedLayout.styled";
 import { CgPokemon } from "react-icons/cg";
 import { FaSearch } from "react-icons/fa";
+import { Loader } from "../common/components/Loader";
 
 export const SharedLayout = () => {
     return (
@@ -15,7 +16,7 @@ export const SharedLayout = () => {
             </Header>
 
             <main>
-                <Suspense>
+                <Suspense fallback={<Loader />}>
                     <Outlet />
                 </Suspense>
             </main>
