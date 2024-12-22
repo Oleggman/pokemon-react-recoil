@@ -24,14 +24,14 @@ const PokemonFinder = () => {
     }
 
     return (
-        <PokemonForm>
+        <PokemonForm onSubmit={onSubmit}>
             <Input
                 type="text"
                 placeholder="Enter pokemon name"
                 value={pokemonName}
                 onChange={(e) => setPokemonName(e.target.value)}
             />
-            <FormButton onClick={onSubmit} type="submit"><FaSearch /></FormButton>
+            <FormButton type="submit"><FaSearch /></FormButton>
         </PokemonForm>
     );
 };

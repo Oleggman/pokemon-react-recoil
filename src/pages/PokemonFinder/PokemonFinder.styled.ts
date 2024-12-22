@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PokemonForm = styled.div`
+export const PokemonForm = styled.form`
   position: relative;
   display: flex;
   flex-direction: row;
