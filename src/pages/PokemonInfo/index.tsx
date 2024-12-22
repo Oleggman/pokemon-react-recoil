@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router";
 import { getPokemonById } from "../../api/pokemonApi";
-import { PokemonDetails } from "./PokemonDetails";
+import { PokemonDetails } from "./components/PokemonDetails";
 import { Loader } from "../common/components/Loader";
 
 const PokemonInfo = () => {
