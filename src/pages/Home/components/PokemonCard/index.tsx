@@ -10,11 +10,13 @@ interface PokemonCardProps {
     pokemon: Pokemon;
 };
 
-export const PokemonCard = ({ pokemon: {name} }: PokemonCardProps): JSX.Element => {
+export const PokemonCard = ({ pokemon: { name } }: PokemonCardProps): JSX.Element => {
+    const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
+    
     return (
         <CardLink to={`/pokemons/${name}`}>
             <CardImg src={placeholder} alt="Pokemon photo" />
-            <CardFooter>{name}</CardFooter>
+            <CardFooter>{pokemonName}</CardFooter>
         </CardLink>
     );
 }

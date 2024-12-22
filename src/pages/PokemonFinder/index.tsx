@@ -2,15 +2,24 @@ import { useNavigate } from "react-router";
 import { PokemonForm, Input, FormButton } from "./PokemonFinder.styled";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
+import { getPokemonById } from "../../api/pokemonApi";
+import Notiflix from "notiflix";
 
 const PokemonFinder = () => {
     const [pokemonName, setPokemonName] = useState('');
     const navigate = useNavigate();
 
-    const onSubmit = (event: { preventDefault: () => void; }) => {
+    const onSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
-        if (pokemonName.trim() !== '') {
-            navigate(`/pokemons/${pokemonName.trim()}`);
+        const inputPokemon = pokemonName.trim().toLowerCase();
+        try {
+            const pokemon = await getPokemonById(inputPokemon);
+        
+            if (pokemon) {
+                navigate(`/pokemons/${inputPokemon}`, { state: { pokemon} });
+            }
+        } catch {
+            Notiflix.Notify.failure(`Pokemon with name ${inputPokemon} not found!`)
         }
     }
 
